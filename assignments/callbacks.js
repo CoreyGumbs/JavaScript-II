@@ -68,7 +68,6 @@ console.log(sumNums(5, 29, add));
 function multiplyNums(x, y, cb){
     return cb(x, y);
 }
-
 const product = (x, y) => x * y;
 
 console.log(multiplyNums(4, 5, product));
@@ -78,14 +77,18 @@ console.log(multiplyNums(4, 5, product));
 function contains(item, list, cb) {
   return cb(list.includes(item));
 }
-const boonleanCheck =  (result) => result;
+const boonleanCheck = (result) => result;
 
-console.log(contains('cat', items, boonleanCheck));
+console.log(contains('cat', items, boonleanCheck), 'item: Cat');
+console.log(contains('Notebook', items, boonleanCheck), 'item: Notebook');
 
 /* STRETCH PROBLEM */
-
+const duplicates = ['Apple', 'Mango', 'Pineapple', 'Grape', 'Apple', 'Grape', 'Watermellon', 'Mango'];
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
 }
+
+const newArray = (arr) => arr;

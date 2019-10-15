@@ -3,8 +3,23 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
+function init(){
+  let name = "Corey Gumbs";
 
+  function alertName(){
+    alert(name);
 
+    function consoleName(){
+      console.log(name);
+    }
+
+    consoleName();
+  }
+
+  alertName();
+}
+
+init();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
