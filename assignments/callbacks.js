@@ -97,4 +97,4 @@ function removeDuplicates(array, cb) {
 
 const newArray = (arr) => arr;
 
-console.log(removeDuplicates(duplicates, newArray));
+console.log(removeDuplicates(duplicates, newArray), duplicates);
