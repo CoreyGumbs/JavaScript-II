@@ -96,8 +96,14 @@ console.log('Donations: $' + donations);
 
 // Problem 1
 //The orders from the company Skinix are delayed and we need to contact everyone from the company to let them know.
-
+const contacts =  runners.filter(runner => runner.company_name === 'Skinix');
+console.log(contacts, 'contacts');
 
 // Problem 2
+//We want to create a banner of all the companies involved in helping us reach our donation goals, we need an array of all the companies in alphabettical order.
+const companies = runners.map((runner, idx)=> {
+  return runner.company_name;
+}).sort();
+console.log(companies, 'companies');
 
 // Problem 3
