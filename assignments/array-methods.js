@@ -95,6 +95,8 @@ console.log('Donations: $' + donations);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+//The orders from the company Skinix are delayed and we need to contact everyone from the company to let them know.
+
 
 // Problem 2
 
