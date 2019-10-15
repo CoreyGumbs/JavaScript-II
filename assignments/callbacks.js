@@ -62,17 +62,25 @@ function sumNums(x, y, cb) {
 }
 
 const add = (x,y) => x + y;
-console.log()
+console.log(sumNums(5, 29, add));
 
  // multiplyNums multiplies two numbers and passes the result to the callback.
-function multiplyNums(x, y, cb) {
- 
+function multiplyNums(x, y, cb){
+    return cb(x, y);
 }
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
+const product = (x, y) => x * y;
+
+console.log(multiplyNums(4, 5, product));
+
+ // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+function contains(item, list, cb) {
+  return cb(list.includes(item));
 }
+const boonleanCheck =  (result) => result;
+
+console.log(contains('cat', items, boonleanCheck));
 
 /* STRETCH PROBLEM */
 
