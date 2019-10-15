@@ -88,7 +88,13 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  const myArray = array.filter((item, idx) => {
+     return array.indexOf(item) === idx
+  });
 
+  return myArray;
 }
 
 const newArray = (arr) => arr;
+
+console.log(removeDuplicates(duplicates, newArray));
