@@ -109,6 +109,6 @@ console.log(companies, 'companies');
 // Problem 3
 //We would like to see the amount of donations made under $100
 
-const smallDonors = runners.filter(runner => runner.donation < 100).reduce((accumulator, currentValue) => accumulator + currentValue.donation, 0);
+const smallDonors = runners.filter(runner => runner.donation <= 100).reduce((accumulator, currentValue) => accumulator + currentValue.donation, 0);
 
 console.log(`Total of donations under $100: $${smallDonors}`);
