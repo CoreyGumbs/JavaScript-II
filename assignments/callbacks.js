@@ -39,31 +39,62 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 */
 
 
+// getLength passes the length of the array into the callback.
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return cb(arr);
 }
 
+const arrLength = (arr) => arr.length;
+
+console.log(getLength(items, arrLength));
+
+// last passes the last item of the array into the callback.
 function last(arr, cb) {
-  // last passes the last item of the array into the callback.
+  return cb(arr);
 }
 
+const lastItem = (arr) => arr[arr.length-1];
+console.log(last(items, lastItem));
+
+// sumNums adds two numbers (x, y) and passes the result to the callback.
 function sumNums(x, y, cb) {
-  // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x, y);
 }
 
-function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-}
+const add = (x,y) => x + y;
+console.log(sumNums(5, 29, add));
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
+ // multiplyNums multiplies two numbers and passes the result to the callback.
+function multiplyNums(x, y, cb){
+    return cb(x, y);
+}
+const product = (x, y) => x * y;
+
+console.log(multiplyNums(4, 5, product));
+
+ // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+function contains(item, list, cb) {
+  return cb(list.includes(item));
 }
+const boonleanCheck = (result) => result;
+
+console.log(contains('cat', items, boonleanCheck), 'item: Cat');
+console.log(contains('Notebook', items, boonleanCheck), 'item: Notebook');
 
 /* STRETCH PROBLEM */
-
+const duplicates = ['Apple', 'Mango', 'Pineapple', 'Grape', 'Apple', 'Grape', 'Watermellon', 'Mango'];
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  const myArray = array.filter((item, idx) => {
+     return array.indexOf(item) === idx
+  });
+
+  return myArray;
 }
+
+const newArray = (arr) => arr;
+
+console.log(removeDuplicates(duplicates, newArray), duplicates);
